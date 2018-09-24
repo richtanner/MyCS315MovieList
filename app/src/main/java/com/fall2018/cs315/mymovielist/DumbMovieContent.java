@@ -55,6 +55,8 @@ public class DumbMovieContent {
         return MOVIES;
     }
 
+    //dumb comment
+
     // Internal helper so we don't forget any steps in the complex two-step system.  Seriously.  It happens.
     private void addMovieToList (MovieModel datMovie) {
         MOVIES.add(datMovie);
