@@ -18,6 +18,9 @@ public class DumbMovieContent {
     public static final List<MovieModel> MOVIES = new ArrayList<MovieModel>();
 
 
+    // this is just a comment to see whats up with git
+
+
     /**
      * Create all those movie Strings we will be needing for teh models
      */
