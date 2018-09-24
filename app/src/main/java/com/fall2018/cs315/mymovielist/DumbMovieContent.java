@@ -19,7 +19,7 @@ public class DumbMovieContent {
 
 
     /**
-     * Create all those movie Strings we will be needing for teh models
+     * Create all those movie Strings we will be needing for the models
      */
 
     // CS315: DO THIS
