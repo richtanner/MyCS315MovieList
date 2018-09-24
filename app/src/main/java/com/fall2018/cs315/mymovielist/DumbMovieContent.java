@@ -37,6 +37,8 @@ public class DumbMovieContent {
     private static final String actionImage = "genericaction";
     private static final String actionWeblink = "http://www.denofgeek.com/us/movies/18824/the-5-most-common-action-movie-plots";
 
+    //here add comment
+
 
     /**
      * Create and return an array of Movie items.  Duh!
