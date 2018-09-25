@@ -15,6 +15,15 @@ import android.view.MenuItem;
  */
 public class MovieDetailActivity extends AppCompatActivity {
 
+
+    // Stupid comments - Robert
+    // Another stupid comment - Zane
+    // Guess what, another one - Zane Jr.
+
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
