@@ -37,7 +37,11 @@ public class DumbMovieContent {
     private static final String actionImage = "genericaction";
     private static final String actionWeblink = "http://www.denofgeek.com/us/movies/18824/the-5-most-common-action-movie-plots";
 
-
+    private static final String horrorTitle = "Every Horror Flick Ever";
+    private static final String horrorDescription = "starts off with any group of friends whom are expressively different in the beginning but in reality share one thing in common..stupidity. They go to some spooky place where some event happened that is still present in the place.  \n \nThe movie is a one hit generic series of pictures youll see again only with a different monster!";
+    private static final String horrorYear = "2018";
+    private static final String horrorImage = "genericaction";
+    private static final String horrorWeblink ="https://www.quora.com/Why-are-horror-movies-so-predictable";
     /**
      * Create and return an array of Movie items.  Duh!
      */
@@ -46,6 +50,7 @@ public class DumbMovieContent {
         // make those movie objects
         MovieModel action = new MovieModel(actionTitle, actionDescription, actionYear, actionImage, actionWeblink);
         MovieModel romcom = new MovieModel(movie1Title, movie1Description, movie1Year, movie1Image, movie1Weblink);
+        MovieModel horror = new MovieModel(horrorTitle, horrorDescription, horrorYear, horrorImage, horrorWeblink);
 
         // add EACH movie object to our lists and maps
         addMovieToList(action);
