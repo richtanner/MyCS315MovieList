@@ -1,6 +1,7 @@
 package com.fall2018.cs315.mymovielist;
 
 import android.app.Activity;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -45,10 +46,6 @@ public class MovieDetailFragment extends Fragment {
         // TODO: BUG FIX - Figure out why the App CRASHES when we rotate this Activity...
 
         if (getArguments().containsKey(ARG_ITEM_ID)) {
-            // Load the Movie content specified by the fragment
-            // arguments. In a real-world scenario, use a Loader
-            // to load content from a content provider.
-
             mItem = DumbMovieContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
 
             Activity activity = this.getActivity();
@@ -58,10 +55,9 @@ public class MovieDetailFragment extends Fragment {
             }
             ImageView thisMovieImageView = activity.findViewById(R.id.movieImageView);
             if (thisMovieImageView != null) {
-
-                // CS315: DO THIS
-                // TODO: Set the image based upon the string we got stashed in getMovieImage()
-
+                String imageName = mItem.getMovieImage();
+                int imageResID = getResources().getIdentifier(imageName, "drawable", getContext().getPackageName());
+                thisMovieImageView.setImageResource(imageResID);
             }
 
             FloatingActionButton fab = (FloatingActionButton) activity.findViewById(R.id.fab);
