@@ -42,6 +42,13 @@ public class DumbMovieContent {
     private static final String horrorYear = "2018";
     private static final String horrorImage = "genericaction";
     private static final String horrorWeblink ="https://www.quora.com/Why-are-horror-movies-so-predictable";
+
+    private static final String sitcomTitle = "Every Sitcom Ever";
+    private static final String sitcomDescription = "starring at least one celebrity that cant get another movie to act in, this is the daily ups and downs of a group of friends or family enclosed around a single location that are laughed at for something subjectively funny.";
+    private static final String sitcomYear = "1989";
+    private static final String sitcomImage = "genericaction";
+    private static final String sitcomWeblink ="https://www.quora.com/Why-are-sitcoms-so-unfunny";
+
     /**
      * Create and return an array of Movie items.  Duh!
      */
@@ -51,10 +58,13 @@ public class DumbMovieContent {
         MovieModel action = new MovieModel(actionTitle, actionDescription, actionYear, actionImage, actionWeblink);
         MovieModel romcom = new MovieModel(movie1Title, movie1Description, movie1Year, movie1Image, movie1Weblink);
         MovieModel horror = new MovieModel(horrorTitle, horrorDescription, horrorYear, horrorImage, horrorWeblink);
+        MovieModel sitcom = new MovieModel(sitcomTitle, sitcomDescription, sitcomYear, sitcomImage, sitcomWeblink);
 
         // add EACH movie object to our lists and maps
         addMovieToList(action);
         addMovieToList(romcom);
+        addMovieToList(horror);
+        addMovieToList(sitcom);
 
         // no more movies to add?  Okay... return our list
         return MOVIES;
