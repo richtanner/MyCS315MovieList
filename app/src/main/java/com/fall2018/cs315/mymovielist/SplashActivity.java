@@ -10,8 +10,6 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // as soon as THIS Activity loads, we know the APP has loaded, so
-        // call for our Main Activity (MovieListActivity, in this case) to load up
         Intent intent = new Intent(this, MovieListActivity.class);
         startActivity(intent);
         finish();

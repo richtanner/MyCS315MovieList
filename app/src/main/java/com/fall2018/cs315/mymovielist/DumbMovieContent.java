@@ -22,36 +22,50 @@ public class DumbMovieContent {
      * Create all those movie Strings we will be needing for teh models
      */
 
-    // CS315: DO THIS
-    // TODO: Create five NEW movie objects here. Complete with images and URLs. DELETE the two existing movies, they are only here as an example
+    private static String movies[][] = new String[5][5];
+    static {
+        movies[0][0] = "Sweeney Todd: The Demon Barber of Fleet Street";
+        movies[0][1] = "Evil Judge Turpin (Alan Rickman) lusts for the beautiful wife of a London barber (Johnny Depp) and transports him to Australia for a crime he did not commit. Returning after 15 years and calling himself Sweeney Todd, the now-mad man vows revenge, applying his razor to unlucky customers and shuttling the bodies down to Mrs. Lovett (Helena Bonham Carter), who uses them in her meat-pie shop. Though many fall to his blade, he will not be satisfied until he slits Turpin's throat.";
+        movies[0][2] = "2007";
+        movies[0][3] = "image";
+        movies[0][4] = "https://en.wikipedia.org/wiki/Sweeney_Todd:_The_Demon_Barber_of_Fleet_Street_(2007_film)";
 
-    private static final String movie1Title = "Generic Rom Com";
-    private static final String movie1Description = "Naturally, focuses on 2 people who really shouldn’t be together. It somehow becomes mutually advantageous for them to be together, or perhaps, they are interested in each other but their romance is based on false pretenses. Because the leads generally have no charisma, they each need a zany best friend who inserts dirty jokes wherever necessary. The two leads will fall in love in an extended music montage set to the music of Sixpence None the Richer. Once they find out about the false pretenses, they will take some time apart but realize how much they care for the other. Then comes “The Chase,” which can either be in an airport (not legal anymore), in traffic or somehow on boats. \n \nYou've seen this before, but not with these two actors!";
-    private static final String movie1Year = "2015";
-    private static final String movie1Image = "genericromcom";
-    private static final String movie1Weblink = "http://showtimeshowdown.com/5-cliche-formulas-of-movie-genres/";
+        movies[1][0] = "Serenity";
+        movies[1][1] = "In this continuation of the television series \"Firefly,\" a group of rebels travels the outskirts of space aboard their ship, Serenity, outside the reach of the Alliance, a sinister regime that controls most of the universe. After the crew takes in Simon (Sean Maher) and his psychic sister, River (Summer Glau), whom he has just rescued from Alliance forces, they find themselves being pursued by the Operative (Chiwetel Ejiofor), an Alliance agent who will stop at nothing to find them.";
+        movies[1][2] = "2005";
+        movies[1][3] = "genericromcom";
+        movies[1][4] = "https://en.wikipedia.org/wiki/Serenity_(2005_film)";
 
-    private static final String actionTitle = "Every Action Movie Ever";
-    private static final String actionDescription = "The villain has left the hero for dead, or killed the hero’s brother, sister, parents, wife or family pets. Filled with righteous fury, the hero tools up and embarks on a bloody rampage.  \n \nIf the movie does well, we will do it again in the sequel! \n \nMaybe the villain tries to get revenge on the hero for getting revenge on the villain in this movie...";
-    private static final String actionYear = "2017";
-    private static final String actionImage = "genericaction";
-    private static final String actionWeblink = "http://www.denofgeek.com/us/movies/18824/the-5-most-common-action-movie-plots";
+        movies[2][0] = "The Sixth Sense";
+        movies[2][1] = "Young Cole Sear (Haley Joel Osment) is haunted by a dark secret: he is visited by ghosts. Cole is frightened by visitations from those with unresolved problems who appear from the shadows. He is too afraid to tell anyone about his anguish, except child psychologist Dr. Malcolm Crowe (Bruce Willis). As Dr. Crowe tries to uncover the truth about Cole's supernatural abilities, the consequences for client and therapist are a jolt that awakens them both to something unexplainable.";
+        movies[2][2] = "1999";
+        movies[2][3] = "genericromcom";
+        movies[2][4] = "https://en.wikipedia.org/wiki/The_Sixth_Sense";
 
+        movies[3][0] = "Moonlight";
+        movies[3][1] = "A look at three defining chapters in the life of Chiron, a young black man growing up in Miami. His epic journey to manhood is guided by the kindness, support and love of the community that helps raise him.";
+        movies[3][2] = "2016";
+        movies[3][3] = "genericromcom";
+        movies[3][4] = "https://en.wikipedia.org/wiki/Moonlight_(2016_film)";
+
+        movies[4][0] = "The Incredibles";
+        movies[4][1] = "In this lauded Pixar animated film, married superheroes Mr. Incredible (Craig T. Nelson) and Elastigirl (Holly Hunter) are forced to assume mundane lives as Bob and Helen Parr after all super-powered activities have been banned by the government. While Mr. Incredible loves his wife and kids, he longs to return to a life of adventure, and he gets a chance when summoned to an island to battle an out-of-control robot. Soon, Mr. Incredible is in trouble, and it's up to his family to save him.";
+        movies[4][2] = "2004";
+        movies[4][3] = "genericromcom";
+        movies[4][4] = "https://en.wikipedia.org/wiki/The_Incredibles";
+    }
 
     /**
      * Create and return an array of Movie items.  Duh!
      */
     public List<MovieModel> createMovieMagic () {
+        MOVIES.clear();
 
-        // make those movie objects
-        MovieModel action = new MovieModel(actionTitle, actionDescription, actionYear, actionImage, actionWeblink);
-        MovieModel romcom = new MovieModel(movie1Title, movie1Description, movie1Year, movie1Image, movie1Weblink);
+        for(int i = 0; i < movies.length; i++){
+            MovieModel newMovie = new MovieModel(movies[i][0],movies[i][1],movies[i][2],movies[i][3],movies[i][4]);
+            addMovieToList(newMovie);
+        }
 
-        // add EACH movie object to our lists and maps
-        addMovieToList(action);
-        addMovieToList(romcom);
-
-        // no more movies to add?  Okay... return our list
         return MOVIES;
     }
 

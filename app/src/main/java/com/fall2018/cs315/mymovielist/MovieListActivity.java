@@ -51,8 +51,6 @@ public class MovieListActivity extends AppCompatActivity {
         recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(movieMaker.MOVIES)); // pass that array... I don't care how you got it...
     }
 
-
-
     public class SimpleItemRecyclerViewAdapter
             extends RecyclerView.Adapter<SimpleItemRecyclerViewAdapter.ViewHolder> {
 
@@ -89,9 +87,6 @@ public class MovieListActivity extends AppCompatActivity {
 
         @Override
         public int getItemCount() {
-            // CS315: DO THIS
-            // TODO: BUG FIX - Figure out why our movie list gets re-added every time we come back to this Activity
-            // TODO: it could be in THIS class, OR in the DumbMovieContent class, or maybe even somewhere else?
             return mValues.size();
         }
 
