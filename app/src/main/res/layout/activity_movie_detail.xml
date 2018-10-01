@@ -35,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scaleType="fitEnd"
-                app:srcCompat="@drawable/placeholder_poster" />
+                app:srcCompat="@drawable/backstrokemenu" />
 
         </android.support.design.widget.CollapsingToolbarLayout>
 
