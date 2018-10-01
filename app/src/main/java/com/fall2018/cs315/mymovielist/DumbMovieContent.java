@@ -49,6 +49,24 @@ public class DumbMovieContent {
     private static final String sitcomImage = "genericaction";
     private static final String sitcomWeblink ="https://www.quora.com/Why-are-sitcoms-so-unfunny";
 
+    private static final String animeTitle = "Every Anime Ever";
+    private static final String animeDescription = "the story begins with the main character as a rookie amongst the vast amount of characters that are stronger and unique at first but from the first fight to the end of the story will proceed to all admire the main character's clout. Some episodes contain nothing but powering up and the main character evolves again, and again, and again. \n \nWill our hero defeat whatever villian it is that has some sort of maniacal reputation? find out a few episodes later on every anime ever!";
+    private static final String animeYear = "1984";
+    private static final String animeImage = "genericaction";
+    private static final String animeWeblink ="https://www.animenewsnetwork.com/bbs/phpBB2/viewtopic.php?t=41317";
+
+    private static final String scifiTitle = "Every Sci-Fi Ever";
+    private static final String scifiDescription = "we start with the military or scientist organization discovering signs of life beyond our own beings. A group of senseless humans that are about as alien as the aliens themselves make dumb decisions leading this expedition to a complete disaster. With an us vs them mentality, the organization also makes really dumb decisions which cost countless lives to the outside forces, But you will still watch it cause you can look at the cool things and is a step up from horror movies!";
+    private static final String scifiYear = "1902";
+    private static final String scifiImage = "genericaction";
+    private static final String scifiWeblink ="https://us.blastingnews.com/opinion/2017/08/sci-fi-movies-predictable-and-superficial-001923681.html";
+
+    private static final String superheroTitle = "Every Super Hero Movie Ever";
+    private static final String superheroDescription = "featuring uniconic orchestra music or unoriginal songs used in the movie, our hero is pretty extrordinary and seems to be at their best only to get sacked by some opponent, only then will he/she pander to becoming more people like so that he/she can be more relatable to the audience as they give it a secondtry against the opposition only to win but leave the city in complete disarray.";
+    private static final String superheroYear = "2008";
+    private static final String superheroImage = "genericaction";
+    private static final String superheroWeblink ="https://www.quora.com/Why-are-superhero-movies-so-predictable";
+
     /**
      * Create and return an array of Movie items.  Duh!
      */
@@ -59,12 +77,18 @@ public class DumbMovieContent {
         MovieModel romcom = new MovieModel(movie1Title, movie1Description, movie1Year, movie1Image, movie1Weblink);
         MovieModel horror = new MovieModel(horrorTitle, horrorDescription, horrorYear, horrorImage, horrorWeblink);
         MovieModel sitcom = new MovieModel(sitcomTitle, sitcomDescription, sitcomYear, sitcomImage, sitcomWeblink);
+        MovieModel anime = new MovieModel(animeTitle, animeDescription, animeYear, animeImage, animeWeblink);
+        MovieModel scifi = new MovieModel(scifiTitle, scifiDescription, scifiYear, scifiImage, scifiWeblink);
+        MovieModel superhero = new MovieModel(superheroTitle, superheroDescription, superheroYear, superheroImage, superheroWeblink);
 
         // add EACH movie object to our lists and maps
         addMovieToList(action);
         addMovieToList(romcom);
         addMovieToList(horror);
         addMovieToList(sitcom);
+        addMovieToList(anime);
+        addMovieToList(scifi);
+        addMovieToList(superhero);
 
         // no more movies to add?  Okay... return our list
         return MOVIES;
