@@ -1,6 +1,7 @@
 package com.fall2018.cs315.mymovielist;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
@@ -79,8 +80,9 @@ public class MovieDetailFragment extends Fragment {
                     // TODO: launch the webpage with the URL we gots back from the model... also lose the snackbar stuff
                     // TODO: hint - you need to establish a new intent and launch a new Activity
 
-                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
+                    Intent intent = new Intent(getActivity(), WebActivity.class);
+                    intent.putExtra(WebActivity.WEB_URL, mItem.getMovieWeblink());
+                    startActivity(intent);
                 }
             });
         }
