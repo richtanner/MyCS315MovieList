@@ -20,7 +20,7 @@ public class MovieWebpage extends AppCompatActivity{
             //getSupportFragmentManager().beginTransaction().add(R.id.webview, fragment).commit();
         }
 
-        //setContentView(R.layout.activity_movie_webpage); // make xml file i guess
+        setContentView(R.layout.activity_movie_webpage);
 
 //        if(getArguments().containsKey(WEB_URL)) {
 //            myWebView = findViewById(R.id.webview);
