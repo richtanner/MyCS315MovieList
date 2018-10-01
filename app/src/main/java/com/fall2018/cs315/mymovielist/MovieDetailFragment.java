@@ -2,6 +2,7 @@ package com.fall2018.cs315.mymovielist;
 
 import android.app.Activity;
 import android.content.res.Resources;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -63,7 +64,10 @@ public class MovieDetailFragment extends Fragment {
 
                 // CS315: DO THIS
                 // TODO: Set the image based upon the string we got stashed in getMovieImage()
-                thisMovieImageView.setImageResource();
+                Resources res = getResources();
+                String mDrawableName = mItem.getMovieImage();
+                int resID = res.getIdentifier(mDrawableName, "drawable", getContext().getPackageName());
+                thisMovieImageView.setImageResource(resID);
             }
 
             FloatingActionButton fab = (FloatingActionButton) activity.findViewById(R.id.fab);

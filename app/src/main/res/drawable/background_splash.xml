@@ -7,7 +7,7 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@drawable/placeholder_splash"/>
+            android:src="@drawable/adamsplash"/>
     </item>
 
 </layer-list>
