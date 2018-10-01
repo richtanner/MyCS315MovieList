@@ -30,7 +30,7 @@
                 android:scaleType="fitEnd"
                 app:layout_collapseMode="parallax"
                 app:layout_collapseParallaxMultiplier="1.0"
-                app:srcCompat="@drawable/placeholder_poster" />
+                app:srcCompat="@drawable/shawshank" />
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/detail_toolbar"

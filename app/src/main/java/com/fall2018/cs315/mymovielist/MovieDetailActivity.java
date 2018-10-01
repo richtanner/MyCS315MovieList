@@ -2,6 +2,7 @@ package com.fall2018.cs315.mymovielist;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -50,20 +51,19 @@ public class MovieDetailActivity extends AppCompatActivity {
         // Load default colors
         int backgroundColor = ContextCompat.getColor(this,
                 R.color.default_title_background);
-        int textColor = ContextCompat.getColor(this,
-                R.color.default_title_color);
+//        int textColor = ContextCompat.getColor(this,
+//                R.color.default_title_color);
 
         // Check that the Vibrant swatch is available
         if(vibrantSwatch != null){
             backgroundColor = vibrantSwatch.getRgb();
-            textColor = vibrantSwatch.getTitleTextColor();
+//            textColor = vibrantSwatch.getTitleTextColor();
         }
 
         // Set the toolbar background and text colors
-
         collapsingToolbar.setBackgroundColor(backgroundColor);
-        collapsingToolbar.setExpandedTitleColor(textColor);
-        collapsingToolbar.setCollapsedTitleTextColor(textColor);
+        collapsingToolbar.setExpandedTitleColor(Color.WHITE);
+        collapsingToolbar.setCollapsedTitleTextColor(Color.WHITE);
     }
 
     @Override
@@ -112,7 +112,8 @@ public class MovieDetailActivity extends AppCompatActivity {
             //
             // http://developer.android.com/design/patterns/navigation.html#up-vs-back
             //
-            navigateUpTo(new Intent(this, MovieListActivity.class));
+            finish();
+//            navigateUpTo(new Intent(this, MovieListActivity.class));
             return true;
         }
         return super.onOptionsItemSelected(item);
