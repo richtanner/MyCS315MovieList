@@ -25,7 +25,7 @@ public class DumbMovieContent {
     // CS315: DO THIS
     // TODO: Create five NEW movie objects here. Complete with images and URLs. DELETE the two existing movies, they are only here as an example
 
-    private static final String movie1Title = "Generic Rom Com";
+    private static final String movie1Title = "extremly super Generic Rom Com";
     private static final String movie1Description = "Naturally, focuses on 2 people who really shouldn’t be together. It somehow becomes mutually advantageous for them to be together, or perhaps, they are interested in each other but their romance is based on false pretenses. Because the leads generally have no charisma, they each need a zany best friend who inserts dirty jokes wherever necessary. The two leads will fall in love in an extended music montage set to the music of Sixpence None the Richer. Once they find out about the false pretenses, they will take some time apart but realize how much they care for the other. Then comes “The Chase,” which can either be in an airport (not legal anymore), in traffic or somehow on boats. \n \nYou've seen this before, but not with these two actors!";
     private static final String movie1Year = "2015";
     private static final String movie1Image = "genericromcom";
