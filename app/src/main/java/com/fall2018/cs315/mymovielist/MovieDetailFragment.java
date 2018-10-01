@@ -93,4 +93,3 @@ public class MovieDetailFragment extends Fragment {
         return rootView;
     }
 }
-
