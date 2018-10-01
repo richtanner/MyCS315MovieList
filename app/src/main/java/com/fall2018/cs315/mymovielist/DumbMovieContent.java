@@ -40,7 +40,7 @@ public class DumbMovieContent {
     private static final String findingnemoTitle = "Finding Nemo";
     private static final String findingnemoDescription = "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home.";
     private static final String findingnemoYear = "2003";
-    private static final String findingnemoImage = "findingnemo";
+    private static final String findingnemoImage = "finding_nemo";
     private static final String findingnemoWeblink = "https://www.imdb.com/title/tt0266543/";
 
     private static final String carsTitle = "Cars";
