@@ -1,6 +1,7 @@
 package com.fall2018.cs315.mymovielist;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -62,6 +63,16 @@ public class MovieDetailFragment extends Fragment {
                 // CS315: DO THIS
                 // TODO: Set the image based upon the string we got stashed in getMovieImage()
 
+                if (mItem.getMovieImage() == "civil_war")
+                    thisMovieImageView.setImageResource(R.drawable.civil_war);
+                else if (mItem.getMovieImage() == "gotg")
+                    thisMovieImageView.setImageResource(R.drawable.gotg);
+                else if (mItem.getMovieImage() == "infinity_war")
+                    thisMovieImageView.setImageResource(R.drawable.infinity_war);
+                else if (mItem.getMovieImage() == "spider_man")
+                    thisMovieImageView.setImageResource(R.drawable.spider_man);
+                else
+                    thisMovieImageView.setImageResource(R.drawable.thor_ragnarok);
             }
 
             FloatingActionButton fab = (FloatingActionButton) activity.findViewById(R.id.fab);
@@ -72,9 +83,10 @@ public class MovieDetailFragment extends Fragment {
                     // CS315: DO THIS
                     // TODO: launch the webpage with the URL we gots back from the model... also lose the snackbar stuff
                     // TODO: hint - you need to establish a new intent and launch a new Activity
+                    // this isn't working D:
 
-                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
+                    Intent intent = new Intent(getActivity(), MovieWebpage.class);
+                    intent.putExtra(MovieWebpage.WEB_URL, mItem.getMovieWeblink());
                 }
             });
         }

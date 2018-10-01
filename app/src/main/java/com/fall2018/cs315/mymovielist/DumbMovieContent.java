@@ -30,19 +30,19 @@ public class DumbMovieContent {
     private static final String movie1Title = "Spider-Man Homecoming";
     private static final String movie1Description = "Peter Parker balances his life as an ordinary high school student in Queens with his superhero\nalter-ego Spider-Man, and finds himself on the trail of a new menace prowling the skies of New\nYork City.";
     private static final String movie1Year = "2017";
-    private static final String movie1Image = "spider-man";
+    private static final String movie1Image = "spider_man";
     private static final String movie1Weblink = "https://www.imdb.com/title/tt2250912/";
 
     private static final String movie2Title = "Avengers: Infinity War";
     private static final String movie2Description = "The Avengers and their allies must be willing to sacrifice all in an\nattempt to defeat the powerful Thanos before his blitz of\ndevastation and ruin puts an end to the universe.";
     private static final String movie2Year = "2018";
-    private static final String movie2Image = "infinity-war";
+    private static final String movie2Image = "infinity_war";
     private static final String movie2Weblink = "https://www.imdb.com/title/tt4154756/";
 
     private static final String movie3Title = "Captain America: Civil War";
     private static final String movie3Description = "Political involvement in the Avengers' activities causes a rift between Captain America and\nIron Man.";
     private static final String movie3Year = "2016";
-    private static final String movie3Image = "civil-war";
+    private static final String movie3Image = "civil_war";
     private static final String movie3Weblink = "https://www.imdb.com/title/tt3498820/";
 
     private static final String movie4Title = "Guardians of the Galaxy";
@@ -54,7 +54,7 @@ public class DumbMovieContent {
     private static final String movie5Title = "Thor: Ragnarok";
     private static final String movie5Description = "Thor is imprisoned on the planet Sakaar, and must race against time to return to Asgard and\nstop Ragnarök, the destruction of his world, at the hands of the powerful and ruthless\nvillain Hela.";
     private static final String movie5Year = "2017";
-    private static final String movie5Image = "thor-ragnarok";
+    private static final String movie5Image = "thor_ragnarok";
     private static final String movie5Weblink = "https://www.imdb.com/title/tt3501632/";
 
 
