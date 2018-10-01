@@ -1,7 +1,11 @@
 package com.fall2018.cs315.mymovielist;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,7 +14,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.net.Uri;
+import android.content.Intent;
 
 /**
  * A fragment representing a single Movie detail screen.
@@ -59,10 +66,21 @@ public class MovieDetailFragment extends Fragment {
             ImageView thisMovieImageView = activity.findViewById(R.id.movieImageView);
             if (thisMovieImageView != null) {
 
-                // CS315: DO THIS
-                // TODO: Set the image based upon the string we got stashed in getMovieImage()
-
+                if (mItem.getMovieImage() == "inception") {
+                    thisMovieImageView.setImageResource(R.drawable.inception);
+                } else if (mItem.getMovieImage() == "interstellar") {
+                    thisMovieImageView.setImageResource(R.drawable.interstellar);
+                } else if (mItem.getMovieImage() == "nightcrawler") {
+                    thisMovieImageView.setImageResource(R.drawable.nightcrawler);
+                } else if (mItem.getMovieImage() == "up") {
+                    thisMovieImageView.setImageResource(R.drawable.up);
+                } else {
+                    thisMovieImageView.setImageResource(R.drawable.whiplash);
+                }
             }
+
+
+
 
             FloatingActionButton fab = (FloatingActionButton) activity.findViewById(R.id.fab);
             fab.setOnClickListener(new View.OnClickListener() {
@@ -70,18 +88,21 @@ public class MovieDetailFragment extends Fragment {
                 public void onClick(View view) {
 
                     // CS315: DO THIS
-                    // TODO: launch the webpage with the URL we gots back from the model... also lose the snackbar stuff
-                    // TODO: hint - you need to establish a new intent and launch a new Activity
+                    // TODO: create loading thing
 
-                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
+//                    Intent intent = new Intent(this, WebActivity.class);
+//                    startActivity(intent);
+
+                    Uri uri = Uri.parse(mItem.getMovieWeblink());
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    startActivity(intent);
                 }
             });
         }
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.movie_detail, container, false);
 
@@ -92,5 +113,10 @@ public class MovieDetailFragment extends Fragment {
 
         return rootView;
     }
+
+//    public void loadWebPage(View v) {
+//        Intent intent = new Intent(this, WebActivity.class);
+//        startActivity(intent);
+//    }
 }
 
