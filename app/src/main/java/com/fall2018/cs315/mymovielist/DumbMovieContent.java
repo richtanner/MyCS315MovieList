@@ -25,17 +25,40 @@ public class DumbMovieContent {
     // CS315: DO THIS
     // TODO: Create five NEW movie objects here. Complete with images and URLs. DELETE the two existing movies, they are only here as an example
 
-    private static final String movie1Title = "Generic Rom Com";
-    private static final String movie1Description = "Naturally, focuses on 2 people who really shouldn’t be together. It somehow becomes mutually advantageous for them to be together, or perhaps, they are interested in each other but their romance is based on false pretenses. Because the leads generally have no charisma, they each need a zany best friend who inserts dirty jokes wherever necessary. The two leads will fall in love in an extended music montage set to the music of Sixpence None the Richer. Once they find out about the false pretenses, they will take some time apart but realize how much they care for the other. Then comes “The Chase,” which can either be in an airport (not legal anymore), in traffic or somehow on boats. \n \nYou've seen this before, but not with these two actors!";
-    private static final String movie1Year = "2015";
-    private static final String movie1Image = "genericromcom";
-    private static final String movie1Weblink = "http://showtimeshowdown.com/5-cliche-formulas-of-movie-genres/";
 
-    private static final String actionTitle = "Every Action Movie Ever";
-    private static final String actionDescription = "The villain has left the hero for dead, or killed the hero’s brother, sister, parents, wife or family pets. Filled with righteous fury, the hero tools up and embarks on a bloody rampage.  \n \nIf the movie does well, we will do it again in the sequel! \n \nMaybe the villain tries to get revenge on the hero for getting revenge on the villain in this movie...";
-    private static final String actionYear = "2017";
-    private static final String actionImage = "genericaction";
-    private static final String actionWeblink = "http://www.denofgeek.com/us/movies/18824/the-5-most-common-action-movie-plots";
+    private static final String hitchHickersTitle = "The Hitchhiker's Guide to the Galaxy";
+    private static final String hitchHickersDescription = "Mere seconds before the Earth is to be demolished by an alien construction crew, journeyman Arthur Dent is swept off the planet by his friend Ford Prefect, a researcher penning a new edition of \"The Hitchhiker's Guide to the Galaxy.\"";
+    private static final String hitchHickersYear = "2005";
+    private static final String hitchHickersImage = "@drawable/hitchhickers";
+    private static final String hitchHickersWeblink = "https://www.imdb.com/title/tt0371724/";
+
+    private static final String treasurePlanetTitle = "Treasure Planet";
+    private static final String treasurePlanetDescription = "A Disney animated version of \"Treasure Island\". The only difference is that the film is set in outer space with alien worlds and other galactic wonders.";
+    private static final String treasurePlanetYear = "2002";
+    private static final String treasurePlanetImage = "@drawable/treasure";
+    private static final String treasurePlanetWeblink = "https://www.imdb.com/title/tt0133240/";
+
+    private static final String piratesTitle = "Pirates of the Caribbean: " +
+            "The Curse of the Black Pearl";
+    private static final String piratesDescription = "Blacksmith Will Turner teams up with eccentric pirate \"Captain\" Jack Sparrow to save his love, the governor's daughter, from Jack's former pirate allies, who are now undead.";
+    private static final String piratesYear = "2003";
+    private static final String piratesImage = "@drawable/pirates";
+    private static final String piratesWeblink = "https://www.imdb.com/title/tt0325980/";
+
+    private static final String hobbitTitle = "The Hobbit: " +
+            "An Unexpected Journey";
+    private static final String hobbitDescription = "A reluctant Hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home, and the gold within it from the dragon Smaug.";
+    private static final String hobbitYear = "2012";
+    private static final String hobbitImage = "@drawable/hobbit";
+    private static final String hobbitWeblink = "https://www.imdb.com/title/tt0903624/";
+
+    private static final String strangeTitle = "Doctor Strange";
+    private static final String strangeDescription = "While on a journey of physical and spiritual healing, a brilliant neurosurgeon is drawn into the world of the mystic arts.";
+    private static final String strangeYear = "2016";
+    private static final String strangeImage = "@drawable/strange";
+    private static final String strangeWeblink = "https://www.imdb.com/title/tt1211837/";
+
+
 
     //This is something different that was wanted here so I am different, yay.
 
@@ -46,12 +69,20 @@ public class DumbMovieContent {
     public List<MovieModel> createMovieMagic () {
 
         // make those movie objects
-        MovieModel action = new MovieModel(actionTitle, actionDescription, actionYear, actionImage, actionWeblink);
-        MovieModel romcom = new MovieModel(movie1Title, movie1Description, movie1Year, movie1Image, movie1Weblink);
+
+        MovieModel hitchHickers = new MovieModel(hitchHickersTitle, hitchHickersDescription, hitchHickersYear, hitchHickersImage, hitchHickersWeblink);
+        MovieModel treasurePlanet = new MovieModel(treasurePlanetTitle, treasurePlanetDescription, treasurePlanetYear, treasurePlanetImage, treasurePlanetWeblink);
+        MovieModel pirates = new MovieModel(piratesTitle, piratesDescription, piratesYear, piratesImage, piratesWeblink);
+        MovieModel hobbit = new MovieModel(hobbitTitle, hobbitDescription, hobbitYear, hobbitImage, hobbitWeblink);
+        MovieModel strange = new MovieModel(strangeTitle, strangeDescription, strangeYear, strangeImage, strangeWeblink);
+
 
         // add EACH movie object to our lists and maps
-        addMovieToList(action);
-        addMovieToList(romcom);
+        addMovieToList(hitchHickers);
+        addMovieToList(treasurePlanet);
+        addMovieToList(pirates);
+        addMovieToList(hobbit);
+        addMovieToList(strange);
 
         // no more movies to add?  Okay... return our list
         return MOVIES;

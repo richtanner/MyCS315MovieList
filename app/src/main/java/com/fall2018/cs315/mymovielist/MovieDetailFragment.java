@@ -59,8 +59,11 @@ public class MovieDetailFragment extends Fragment {
             ImageView thisMovieImageView = activity.findViewById(R.id.movieImageView);
             if (thisMovieImageView != null) {
 
+
                 // CS315: DO THIS
                 // TODO: Set the image based upon the string we got stashed in getMovieImage()
+
+                
 
             }
 
