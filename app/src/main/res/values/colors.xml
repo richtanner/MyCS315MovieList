@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#3F3F3F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="splashColor">#3F3F3F</color>
+    <color name="default_title_background">#000</color>
+    <color name="default_title_color">#fff</color>
 </resources>

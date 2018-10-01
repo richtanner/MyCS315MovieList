@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -43,15 +44,14 @@ public class MovieListActivity extends AppCompatActivity {
 
         View recyclerView = findViewById(R.id.movie_list);
         assert recyclerView != null;
-        setupRecyclerView((RecyclerView) recyclerView);
+        if (savedInstanceState == null)
+            setupRecyclerView((RecyclerView) recyclerView);
     }
 
     private void setupRecyclerView(@NonNull RecyclerView recyclerView) {
         movieMaker.createMovieMagic();
         recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(movieMaker.MOVIES)); // pass that array... I don't care how you got it...
     }
-
-
 
     public class SimpleItemRecyclerViewAdapter
             extends RecyclerView.Adapter<SimpleItemRecyclerViewAdapter.ViewHolder> {
@@ -74,6 +74,7 @@ public class MovieListActivity extends AppCompatActivity {
             holder.mItem = mValues.get(position);
             holder.mIdView.setText(mValues.get(position).getMovieTitle());
             holder.mContentView.setText(mValues.get(position).getMovieYear());
+            holder.mImageView.setImageResource(getResources().getIdentifier(mValues.get(position).getMovieImage(),"drawable", getPackageName()));
 
             holder.mView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -99,6 +100,7 @@ public class MovieListActivity extends AppCompatActivity {
             public final View mView;
             public final TextView mIdView;
             public final TextView mContentView;
+            public final ImageView mImageView;
             public MovieModel mItem;
 
             public ViewHolder(View view) {
@@ -106,6 +108,7 @@ public class MovieListActivity extends AppCompatActivity {
                 mView = view;
                 mIdView = (TextView) view.findViewById(R.id.id);
                 mContentView = (TextView) view.findViewById(R.id.content);
+                mImageView = (ImageView) view.findViewById(R.id.movieImageList);
             }
 
             @Override

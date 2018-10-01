@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.fall2018.cs315.mymovielist">
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -21,10 +22,12 @@
         </activity>
 
         <activity android:name=".MovieListActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
             android:name=".MovieDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_movie_detail"
             android:parentActivityName=".MovieListActivity"
             android:theme="@style/AppTheme.NoActionBar">

@@ -1,7 +1,12 @@
 package com.fall2018.cs315.mymovielist;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.support.design.widget.AppBarLayout;
+import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.ActionBar;
@@ -14,6 +19,52 @@ import android.view.MenuItem;
  * in a {@link MovieListActivity}.
  */
 public class MovieDetailActivity extends AppCompatActivity {
+
+    // Generate palette synchronously and return it
+    public Palette createPaletteSync(Bitmap bitmap) {
+        return Palette.from(bitmap).generate();
+    }
+
+    // Generate palette asynchronously and use it on a different
+    // thread using onGenerated()
+    public void createPaletteAsync(Bitmap bitmap) {
+        Palette.from(bitmap).generate(new Palette.PaletteAsyncListener() {
+            public void onGenerated(Palette p) {
+                // Use generated instance
+            }
+        });
+    }
+
+    // Set the background and text colors of a toolbar given a
+    // bitmap image to match
+    public void setToolbarColor(Bitmap bitmap) {
+        // Generate the palette and get the vibrant swatch
+        // See the createPaletteSync() method
+        // from the code snippet above
+        Palette p = createPaletteSync(bitmap);
+        Palette.Swatch vibrantSwatch = p.getVibrantSwatch();
+
+        AppBarLayout appBarLayout = findViewById(R.id.app_bar);
+        CollapsingToolbarLayout collapsingToolbar = findViewById(R.id.toolbar_layout);
+
+        // Load default colors
+        int backgroundColor = ContextCompat.getColor(this,
+                R.color.default_title_background);
+        int textColor = ContextCompat.getColor(this,
+                R.color.default_title_color);
+
+        // Check that the Vibrant swatch is available
+        if(vibrantSwatch != null){
+            backgroundColor = vibrantSwatch.getRgb();
+            textColor = vibrantSwatch.getTitleTextColor();
+        }
+
+        // Set the toolbar background and text colors
+
+        collapsingToolbar.setBackgroundColor(backgroundColor);
+        collapsingToolbar.setExpandedTitleColor(textColor);
+        collapsingToolbar.setCollapsedTitleTextColor(textColor);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

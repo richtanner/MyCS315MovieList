@@ -1,5 +1,7 @@
 package com.fall2018.cs315.mymovielist;
 
+import android.graphics.drawable.Drawable;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -22,35 +24,47 @@ public class DumbMovieContent {
      * Create all those movie Strings we will be needing for teh models
      */
 
-    // CS315: DO THIS
-    // TODO: Create five NEW movie objects here. Complete with images and URLs. DELETE the two existing movies, they are only here as an example
-
-    private static final String movie1Title = "Generic Rom Com";
-    private static final String movie1Description = "Naturally, focuses on 2 people who really shouldn’t be together. It somehow becomes mutually advantageous for them to be together, or perhaps, they are interested in each other but their romance is based on false pretenses. Because the leads generally have no charisma, they each need a zany best friend who inserts dirty jokes wherever necessary. The two leads will fall in love in an extended music montage set to the music of Sixpence None the Richer. Once they find out about the false pretenses, they will take some time apart but realize how much they care for the other. Then comes “The Chase,” which can either be in an airport (not legal anymore), in traffic or somehow on boats. \n \nYou've seen this before, but not with these two actors!";
-    private static final String movie1Year = "2015";
-    private static final String movie1Image = "genericromcom";
-    private static final String movie1Weblink = "http://showtimeshowdown.com/5-cliche-formulas-of-movie-genres/";
-
-    private static final String actionTitle = "Every Action Movie Ever";
-    private static final String actionDescription = "The villain has left the hero for dead, or killed the hero’s brother, sister, parents, wife or family pets. Filled with righteous fury, the hero tools up and embarks on a bloody rampage.  \n \nIf the movie does well, we will do it again in the sequel! \n \nMaybe the villain tries to get revenge on the hero for getting revenge on the villain in this movie...";
-    private static final String actionYear = "2017";
-    private static final String actionImage = "genericaction";
-    private static final String actionWeblink = "http://www.denofgeek.com/us/movies/18824/the-5-most-common-action-movie-plots";
-
-    // Blah blah blah
-
     /**
      * Create and return an array of Movie items.  Duh!
      */
     public List<MovieModel> createMovieMagic () {
 
         // make those movie objects
-        MovieModel action = new MovieModel(actionTitle, actionDescription, actionYear, actionImage, actionWeblink);
-        MovieModel romcom = new MovieModel(movie1Title, movie1Description, movie1Year, movie1Image, movie1Weblink);
-
         // add EACH movie object to our lists and maps
-        addMovieToList(action);
-        addMovieToList(romcom);
+        addMovieToList(new MovieModel(
+                "The Shawshank Redemption",
+                "Chronicles the experiences of a formerly successful banker as a prisoner in the gloomy jailhouse of Shawshank after being found guilty of a crime he did not commit. The film portrays the man's unique way of dealing with his new, torturous life; along the way he befriends a number of fellow prisoners, most notably a wise long-term inmate named Red.",
+                "1994",
+                "shawshank",
+                "https://www.imdb.com/title/tt0111161"));
+
+        addMovieToList(new MovieModel(
+                "The Lion King",
+                "A young lion prince is cast out of his pride by his cruel uncle, who claims he killed his father. While the uncle rules with an iron paw, the prince grows up beyond the Savannah, living by a philosophy: No worries for the rest of your days. But when his past comes to haunt him, the young prince must decide his fate: Will he remain an outcast or face his demons and become what he needs to be?",
+                "1994",
+                "lionking",
+                "https://www.imdb.com/title/tt0110357"));
+
+        addMovieToList(new MovieModel(
+                "WALL·E",
+                "WALL-E, short for Waste Allocation Load Lifter Earth-class, is the last robot left on Earth. He spends his days tidying up the planet, one piece of garbage at a time. But during 700 years, WALL-E has developed a personality, and he's more than a little lonely. Then he spots EVE, a sleek and shapely probe sent back to Earth on a scanning mission. Smitten WALL-E embarks on his greatest adventure yet when he follows EVE across the galaxy.",
+                "2008",
+                "walle",
+                "https://www.imdb.com/title/tt0910970"));
+
+        addMovieToList(new MovieModel(
+                "The Princess Bride",
+                "A kindly grandfather sits down with his ill grandson and reads him a story. The story is one that has been passed down from father to son for generations. As the grandfather reads the story, the action comes alive. The story is a classic tale of love and adventure as the beautiful Buttercup, engaged to the odious Prince Humperdinck, is kidnapped and held against her will in order to start a war, It is up to Westley (her childhood beau, now returned as the Dread Pirate Roberts) to save her. On the way he meets a thief and his hired helpers, an accomplished swordsman and a huge, super strong giant, both of whom become Westley's companions in his quest.",
+                "1987",
+                "princessbride",
+                "https://www.imdb.com/title/tt0093779"));
+
+        addMovieToList(new MovieModel(
+                "Groundhog Day",
+                "A weather man is reluctantly sent to cover a story about a weather forecasting \"rat\" (as he calls it). This is his fourth year on the story, and he makes no effort to hide his frustration. On awaking the 'following' day he discovers that it's Groundhog Day again, and again, and again. First he uses this to his advantage, then comes the realisation that he is doomed to spend the rest of eternity in the same place, seeing the same people do the same thing EVERY day.",
+                "1993",
+                "groundhogday",
+                "https://www.imdb.com/title/tt0107048"));
 
         // no more movies to add?  Okay... return our list
         return MOVIES;
