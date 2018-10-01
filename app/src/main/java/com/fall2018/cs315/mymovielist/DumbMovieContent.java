@@ -25,18 +25,35 @@ public class DumbMovieContent {
     // CS315: DO THIS
     // TODO: Create five NEW movie objects here. Complete with images and URLs. DELETE the two existing movies, they are only here as an example
 
-    private static final String movie1Title = "extremly super Generic Rom Com";
-    private static final String movie1Description = "Naturally, focuses on 2 people who really shouldn’t be together. It somehow becomes mutually advantageous for them to be together, or perhaps, they are interested in each other but their romance is based on false pretenses. Because the leads generally have no charisma, they each need a zany best friend who inserts dirty jokes wherever necessary. The two leads will fall in love in an extended music montage set to the music of Sixpence None the Richer. Once they find out about the false pretenses, they will take some time apart but realize how much they care for the other. Then comes “The Chase,” which can either be in an airport (not legal anymore), in traffic or somehow on boats. \n \nYou've seen this before, but not with these two actors!";
-    private static final String movie1Year = "2015";
-    private static final String movie1Image = "genericromcom";
-    private static final String movie1Weblink = "http://showtimeshowdown.com/5-cliche-formulas-of-movie-genres/";
+    private static final string 1movieTitle ="Epic Gamer Movie";
+    private static final String 1movieDescription = " Okay so two gamers unite to create the most epic game off in all of time. But who will be the most epic gamer. \n";
+    private static final String 1movieYear = "2012";
+    private static final String 1movieImage = "EpicGamerNerdPose";
+    private static final String 1movieWeblink = "https://www.eventcinemas.com.au/Movies/NowShowing";
 
-    private static final String actionTitle = "Every Action Movie Ever";
-    private static final String actionDescription = "The villain has left the hero for dead, or killed the hero’s brother, sister, parents, wife or family pets. Filled with righteous fury, the hero tools up and embarks on a bloody rampage.  \n \nIf the movie does well, we will do it again in the sequel! \n \nMaybe the villain tries to get revenge on the hero for getting revenge on the villain in this movie...";
-    private static final String actionYear = "2017";
-    private static final String actionImage = "genericaction";
-    private static final String actionWeblink = "http://www.denofgeek.com/us/movies/18824/the-5-most-common-action-movie-plots";
+    private static final String 1actionTitle = "Epic Fail Movie";
+    private static final String 1actionDescription = "So two guys from Minnesota stumble upon a forbidden pack of cigarretes, which they accidently smoke, and epic fail. \n just say no to drugs!";
+    private static final String 1actionYear = "2012";
+    private static final String 1actionImage = "EpicFailImage";
+    private static final String 1actionWeblink = "https://www.moonlight.com.au/";
 
+    private static final String 2actionTitle = "Epic Love Movie";
+    private static final String 2actionDescription = "So two lovers are in love, but have an epic story to go along with it!";
+    private static final String 2actionYear = "2012";
+    private static final String 2actionImage = "EpicHeartImage";
+    private static final String 2actionWeblink = "https://www.imdb.com/";
+
+    private static final String 3actionTitle = "Epic Moves Movie";
+    private static final String 3actionDescription = "So two dudes are riding a skateboard and make some Seriously epic moves.";
+    private static final String 3actionYear = "2012";
+    private static final String 3actionImage = "EpicMoveImage";
+    private static final String 3actionWeblink = "http://www.pccmovies.com/location/3906/Abilene-PREMIERE-LUX-Cine-10-Abilene-Mall";
+
+    private static final String 3actionTitle = "Epic Wow Movie";
+    private static final String 3actionDescription = "So two dudes are really saying Wow in response to an epic plot that unfolds before them.";
+    private static final String 3actionYear = "2012";
+    private static final String 3actionImage = "EpicWowImage";
+    private static final String 3actionWeblink = "http://www.pccmovies.com/location/3906/Abilene-PREMIERE-LUX-Cine-10-Abilene-Mall";
 
     /**
      * Create and return an array of Movie items.  Duh!
