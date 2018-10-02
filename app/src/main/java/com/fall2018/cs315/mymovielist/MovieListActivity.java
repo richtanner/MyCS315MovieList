@@ -41,13 +41,15 @@ public class MovieListActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         toolbar.setTitle(getTitle());
 
+        movieMaker.createMovieMagic();
+
         View recyclerView = findViewById(R.id.movie_list);
         assert recyclerView != null;
         setupRecyclerView((RecyclerView) recyclerView);
     }
 
     private void setupRecyclerView(@NonNull RecyclerView recyclerView) {
-        movieMaker.createMovieMagic();
+        // //probably the intern.
         recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(movieMaker.MOVIES)); // pass that array... I don't care how you got it...
     }
 

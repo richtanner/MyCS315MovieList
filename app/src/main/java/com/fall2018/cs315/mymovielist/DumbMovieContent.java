@@ -27,34 +27,64 @@ public class DumbMovieContent {
     // CS315: DO THIS
     // TODO: Create five NEW movie objects here. Complete with images and URLs. DELETE the two existing movies, they are only here as an example
 
-    private static final String movie1Title = "Generic Rom Com";
-    private static final String movie1Description = "Naturally, focuses on 2 people who really shouldn’t be together. It somehow becomes mutually advantageous for them to be together, or perhaps, they are interested in each other but their romance is based on false pretenses. Because the leads generally have no charisma, they each need a zany best friend who inserts dirty jokes wherever necessary. The two leads will fall in love in an extended music montage set to the music of Sixpence None the Richer. Once they find out about the false pretenses, they will take some time apart but realize how much they care for the other. Then comes “The Chase,” which can either be in an airport (not legal anymore), in traffic or somehow on boats. \n \nYou've seen this before, but not with these two actors!";
-    private static final String movie1Year = "2015";
-    private static final String movie1Image = "genericromcom";
-    private static final String movie1Weblink = "http://showtimeshowdown.com/5-cliche-formulas-of-movie-genres/";
+    private static final String movie1Title = "Finding Nemo";
+    private static final String movie1Description = "What does a clown fish father do when his son is captured by divers? Find him! Experience a film so good that the animators had to tone down the ocean surface effect because it was too realistic!";
+    private static final String movie1Year = "2003";
+    private static final String movie1Image = "findingnemo";
+    private static final String movie1Weblink = "https://www.imdb.com/title/tt0266543/";
 
-    private static final String actionTitle = "Every Action Movie Ever";
-    private static final String actionDescription = "The villain has left the hero for dead, or killed the hero’s brother, sister, parents, wife or family pets. Filled with righteous fury, the hero tools up and embarks on a bloody rampage.  \n \nIf the movie does well, we will do it again in the sequel! \n \nMaybe the villain tries to get revenge on the hero for getting revenge on the villain in this movie...";
-    private static final String actionYear = "2017";
-    private static final String actionImage = "genericaction";
-    private static final String actionWeblink = "http://www.denofgeek.com/us/movies/18824/the-5-most-common-action-movie-plots";
+    private static final String movie2Title = "Cars";
+    private static final String movie2Description = "In a world... where everyone is a car... one racer has a chance to win the prestigious \"Piston Cup\"... but is thwarted... by an action figure of himself. THIS SUMMER... Watch if he can escape from hillbilly hell in time to compete!";
+    private static final String movie2Year = "2006";
+    private static final String movie2Image = "cars";
+    private static final String movie2Weblink = "https://www.imdb.com/title/tt0317219/";
 
+    private static final String movie3Title = "Star Wars: A new hope";
+    private static final String movie3Description = "Watch the most epic version of the hero's quest of the last century. Follow Luke Skywalker as he uncovers the mysteries of the force, and fights against the galactic federation.";
+    private static final String movie3Year = "1977";
+    private static final String movie3Image = "starwars";
+    private static final String movie3Weblink = "//https://www.imdb.com/title/tt0076759/";
+
+    private static final String movie4Title = "A Charlie Brown Christmas";
+    private static final String movie4Description = "It's Christmas time, and Charlie Brown forgot what that really means. A wholesome family movie straight out of a comic strip!";
+    private static final String movie4Year = "1965";
+    private static final String movie4Image = "charliebrownchristmas";
+    private static final String movie4Weblink = "https://www.imdb.com/title/tt0059026/";
+
+    private static final String movie5Title = "The Lego Movie";
+    private static final String movie5Description = "The world of legos has been endangered by president business, and a chosen hero has risen up to find the piece of resistance and thwart his plans! Unfortunately, the chosen hero is nothing more than a normal lego civilian. Will he succeed and get the girl? Probably, but it'll be hilarious!";
+    private static final String movie5Year = "2014";
+    private static final String movie5Image = "legomovie";
+    private static final String movie5Weblink = "https://www.imdb.com/title/tt1490017/";
+
+    private boolean haveIBeenCreated = false;
 
     /**
      * Create and return an array of Movie items.  Duh!
      */
     public List<MovieModel> createMovieMagic () {
 
-        // make those movie objects
-        MovieModel action = new MovieModel(actionTitle, actionDescription, actionYear, actionImage, actionWeblink);
-        MovieModel romcom = new MovieModel(movie1Title, movie1Description, movie1Year, movie1Image, movie1Weblink);
+        if(!haveIBeenCreated) {
 
-        // add EACH movie object to our lists and maps
-        addMovieToList(action);
-        addMovieToList(romcom);
+            // make those movie objects
+            MovieModel nemo = new MovieModel(movie1Title, movie1Description, movie1Year, movie1Image, movie1Weblink);
+            MovieModel cars = new MovieModel(movie2Title, movie2Description, movie2Year, movie2Image, movie2Weblink);
+            MovieModel starWars = new MovieModel(movie3Title, movie3Description, movie3Year, movie3Image, movie3Weblink);
+            MovieModel charlieBrown = new MovieModel(movie4Title, movie4Description, movie4Year, movie4Image, movie4Weblink);
+            MovieModel legoMovie = new MovieModel(movie5Title, movie5Description, movie5Year, movie5Image, movie5Weblink);
 
+            // add EACH movie object to our lists and maps
+            addMovieToList(nemo);
+            addMovieToList(cars);
+            addMovieToList(starWars);
+            addMovieToList(charlieBrown);
+            addMovieToList(legoMovie);
+
+            haveIBeenCreated = true;
+        }
         // no more movies to add?  Okay... return our list
         return MOVIES;
+
     }
 
     // Internal helper so we don't forget any steps in the complex two-step system.  Seriously.  It happens.
