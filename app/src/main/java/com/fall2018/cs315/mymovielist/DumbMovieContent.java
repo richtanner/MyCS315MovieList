@@ -37,23 +37,23 @@ public class DumbMovieContent {
     private static final String actionImage = "theroom";
     private static final String actionWeblink = "https://www.imdb.com/title/tt0368226/";
 
-    private static final String actionTitle = "Inception";
-    private static final String actionDescription = "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.";
-    private static final String actionYear = "2010";
-    private static final String actionImage = "inceptionposter";
-    private static final String actionWeblink = "https://www.imdb.com/title/tt1375666/";
+    private static final String InceptionTitle = "Inception";
+    private static final String InceptionDescription = "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.";
+    private static final String InceptionYear = "2010";
+    private static final String InceptionImage = "inceptionposter";
+    private static final String InceptionWeblink = "https://www.imdb.com/title/tt1375666/";
 
-    private static final String actionTitle = "Cowboy Bebop: The Movie";
-    private static final String actionDescription = "A terrorist explosion releases a deadly virus on the masses, and it's up the bounty-hunting Bebop crew to catch the cold-blooded culprit.";
-    private static final String actionYear = "2001";
-    private static final String actionImage = "bebop";
-    private static final String actionWeblink = "https://www.imdb.com/title/tt0275277/";
+    private static final String BebopTitle = "Cowboy Bebop: The Movie";
+    private static final String BebopDescription = "A terrorist explosion releases a deadly virus on the masses, and it's up the bounty-hunting Bebop crew to catch the cold-blooded culprit.";
+    private static final String BebopYear = "2001";
+    private static final String BebopImage = "bebop";
+    private static final String BebopWeblink = "https://www.imdb.com/title/tt0275277/";
 
-    private static final String actionTitle = "Cloverfield";
-    private static final String actionDescription = "A group of friends venture deep into the streets of New York on a rescue mission during a rampaging monster attack.";
-    private static final String actionYear = "2008";
-    private static final String actionImage = "cloverfield";
-    private static final String actionWeblink = "https://www.imdb.com/title/tt1060277/";
+    private static final String CloverfieldTitle = "Cloverfield";
+    private static final String CloverfieldDescription = "A group of friends venture deep into the streets of New York on a rescue mission during a rampaging monster attack.";
+    private static final String CloverfieldYear = "2008";
+    private static final String CloverfieldImage = "cloverfield";
+    private static final String CloverfieldWeblink = "https://www.imdb.com/title/tt1060277/";
 
 
     /**

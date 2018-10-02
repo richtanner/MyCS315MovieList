@@ -1,6 +1,7 @@
 package com.fall2018.cs315.mymovielist;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.net.Uri;
 
 /**
  * A fragment representing a single Movie detail screen.
@@ -61,7 +63,9 @@ public class MovieDetailFragment extends Fragment {
 
                 // CS315: DO THIS
                 // TODO: Set the image based upon the string we got stashed in getMovieImage()
-
+                String movname = mItem.getMovieImage(); // get name of current movie
+                int imageIDthing = getResources().getIdentifier(movname, "drawable", getContext().getPackageName()); // according to stack overflow, get identifier??
+                thisMovieImageView.setImageResource(imageIDthing);
             }
 
             FloatingActionButton fab = (FloatingActionButton) activity.findViewById(R.id.fab);
@@ -73,8 +77,13 @@ public class MovieDetailFragment extends Fragment {
                     // TODO: launch the webpage with the URL we gots back from the model... also lose the snackbar stuff
                     // TODO: hint - you need to establish a new intent and launch a new Activity
 
-                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
+                    Uri uriUrl = Uri.parse(mItem.getMovieWeblink());
+                    Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+                    startActivity(launchBrowser);
+
+
+//                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                            .setAction("Action", null).show();
                 }
             });
         }
@@ -83,11 +92,12 @@ public class MovieDetailFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.movie_detail, container, false);
+        View rootView = inflater.inflate(android.R.layout.movie_detail, container, false);
 
         // Show the Movie Description as text in a TextView.
         if (mItem != null) {
-            ((TextView) rootView.findViewById(R.id.movie_detail)).setText(mItem.getMovieDescription());
+            ((TextView) rootView.findViewById(android.R.id.movie_detail)).setText(mItem.getMovieDescription());
+
         }
 
         return rootView;
