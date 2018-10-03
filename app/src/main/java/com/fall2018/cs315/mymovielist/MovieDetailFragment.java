@@ -1,6 +1,8 @@
 package com.fall2018.cs315.mymovielist;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -42,7 +44,7 @@ public class MovieDetailFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         // CS315: DO THIS
-        // TODO: BUG FIX - Figure out why the App CRASHES when we rotate this Activity...
+        // TODO: BUG FIX - Figure out why the App CRASHES when we rotate this Activity... *done*
 
         if (getArguments().containsKey(ARG_ITEM_ID)) {
             // Load the Movie content specified by the fragment
@@ -60,7 +62,9 @@ public class MovieDetailFragment extends Fragment {
             if (thisMovieImageView != null) {
 
                 // CS315: DO THIS
-                // TODO: Set the image based upon the string we got stashed in getMovieImage()
+                // TODO: Set the image based upon the string we got stashed in getMovieImage() *done*
+                int id = getResources().getIdentifier("com.fall2018.cs315.mymovielist:drawable/" + mItem.getMovieImage(), null, null);
+                thisMovieImageView.setImageResource(id);
 
             }
 
@@ -71,10 +75,11 @@ public class MovieDetailFragment extends Fragment {
 
                     // CS315: DO THIS
                     // TODO: launch the webpage with the URL we gots back from the model... also lose the snackbar stuff
-                    // TODO: hint - you need to establish a new intent and launch a new Activity
+                    // TODO: hint - you need to establish a new intent and launch a new Activity *done*
 
-                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
+                    Uri uri = Uri.parse(mItem.getMovieWeblink());
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    startActivity(intent);
                 }
             });
         }
