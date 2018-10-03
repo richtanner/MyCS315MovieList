@@ -61,7 +61,6 @@ public class MovieDetailFragment extends Fragment {
             if (thisMovieImageView != null) {
 
 
-                // TODO: Set the image based upon the string we got stashed in getMovieImage()
                 if(mItem.getMovieImage() == "hitchhickers")
                 {
                     thisMovieImageView.setImageResource(R.drawable.hitchhickers);
@@ -94,10 +93,13 @@ public class MovieDetailFragment extends Fragment {
 
                     // CS315: DO THIS
                     // TODO: launch the webpage with the URL we gots back from the model... also lose the snackbar stuff
-                    // TODO: hint - you need to establish a new intent and launch a new Activity
 
-                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
+                    //TODO: hint - you need to establish a new intent and launch a new Activity
+
+                    
+
+//                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                            .setAction("Action", null).show();
                 }
             });
         }

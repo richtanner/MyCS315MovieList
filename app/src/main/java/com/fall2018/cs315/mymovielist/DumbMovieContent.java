@@ -22,8 +22,6 @@ public class DumbMovieContent {
      * Create all those movie Strings we will be needing for teh models
      */
 
-    // CS315: DO THIS
-    // TODO: Create five NEW movie objects here. Complete with images and URLs. DELETE the two existing movies, they are only here as an example
 
 
     private static final String hitchHickersTitle = "Hitchhiker's";
