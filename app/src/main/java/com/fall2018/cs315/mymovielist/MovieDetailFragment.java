@@ -83,7 +83,6 @@ public class MovieDetailFragment extends Fragment {
                     // CS315: DO THIS
                     // TODO: launch the webpage with the URL we gots back from the model... also lose the snackbar stuff
                     // TODO: hint - you need to establish a new intent and launch a new Activity
-                    // this isn't working D:
 
                     Intent intent = new Intent(getActivity(), MovieWebpage.class);
                     intent.putExtra(MovieWebpage.WEB_URL, mItem.getMovieWeblink());

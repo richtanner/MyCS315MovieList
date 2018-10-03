@@ -7,24 +7,16 @@ import android.webkit.WebView;
 public class MovieWebpage extends AppCompatActivity{
 
     public static final String WEB_URL = "";
-    private WebView myWebView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (savedInstanceState == null) {
-            Bundle arguments = new Bundle();
-            //arguments.putString(MovieWebpage.WEB_URL, getIntent().getStringExtra(MovieWebpage));
-            MovieWebpage fragment = new MovieWebpage();
-            //fragment.setArguments(arguments);
-            //getSupportFragmentManager().beginTransaction().add(R.id.webview, fragment).commit();
-        }
 
         setContentView(R.layout.activity_movie_webpage);
 
-//        if(getArguments().containsKey(WEB_URL)) {
-//            myWebView = findViewById(R.id.webview);
-//            myWebView.loadUrl(WEB_URL);
-//        }
+        String url = getIntent().getStringExtra(WEB_URL);
+
+        WebView web = (WebView) findViewById(R.id.webView);
+        web.loadUrl(url);
     }
 }

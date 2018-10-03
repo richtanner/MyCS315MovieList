@@ -63,6 +63,10 @@ public class DumbMovieContent {
      */
     public List<MovieModel> createMovieMagic () {
 
+        // clear the array
+        ITEM_MAP.clear();
+        MOVIES.clear();
+
         // make those movie objects
         MovieModel movie1 = new MovieModel(movie1Title, movie1Description, movie1Year, movie1Image, movie1Weblink);
         MovieModel movie2 = new MovieModel(movie2Title, movie2Description, movie2Year, movie2Image, movie2Weblink);
@@ -86,4 +90,5 @@ public class DumbMovieContent {
         MOVIES.add(datMovie);
         ITEM_MAP.put(datMovie.getMovieTitle(), datMovie);
     }
+
 }
