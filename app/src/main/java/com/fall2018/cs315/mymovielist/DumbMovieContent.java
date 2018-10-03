@@ -16,7 +16,7 @@ public class DumbMovieContent {
      * A List of the Movie items.
      */
     public static final List<MovieModel> MOVIES = new ArrayList<MovieModel>();
-
+//----
 
     /**
      * Create all those movie Strings we will be needing for teh models
