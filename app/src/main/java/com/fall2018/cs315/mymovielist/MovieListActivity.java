@@ -44,8 +44,7 @@ public class MovieListActivity extends AppCompatActivity {
 
         View recyclerView = findViewById(R.id.movie_list);
         assert recyclerView != null;
-        if (savedInstanceState == null)
-            setupRecyclerView((RecyclerView) recyclerView);
+        setupRecyclerView((RecyclerView) recyclerView);
     }
 
     private void setupRecyclerView(@NonNull RecyclerView recyclerView) {

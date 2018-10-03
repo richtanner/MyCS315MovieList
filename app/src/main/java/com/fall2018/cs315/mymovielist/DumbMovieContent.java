@@ -17,7 +17,7 @@ public class DumbMovieContent {
     /**
      * A List of the Movie items.
      */
-    public static final List<MovieModel> MOVIES = new ArrayList<MovieModel>();
+    public static List<MovieModel> MOVIES;
 
 
     /**
@@ -28,6 +28,8 @@ public class DumbMovieContent {
      * Create and return an array of Movie items.  Duh!
      */
     public List<MovieModel> createMovieMagic () {
+
+        MOVIES = new ArrayList<>();
 
         // make those movie objects
         // add EACH movie object to our lists and maps
