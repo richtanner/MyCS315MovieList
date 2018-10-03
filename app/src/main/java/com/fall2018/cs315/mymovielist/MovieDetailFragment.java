@@ -56,14 +56,34 @@ public class MovieDetailFragment extends Fragment {
             if (appBarLayout != null) {
                 appBarLayout.setTitle(mItem.getMovieTitle());
             }
+
             ImageView thisMovieImageView = activity.findViewById(R.id.movieImageView);
             if (thisMovieImageView != null) {
 
 
-                // CS315: DO THIS
                 // TODO: Set the image based upon the string we got stashed in getMovieImage()
+                if(mItem.getMovieImage() == "hitchhickers")
+                {
+                    thisMovieImageView.setImageResource(R.drawable.hitchhickers);
+                }
+                if(mItem.getMovieImage() == "treasure")
+                {
+                    thisMovieImageView.setImageResource(R.drawable.treasure);
+                }
+                if(mItem.getMovieImage() == "pirates")
+                {
+                    thisMovieImageView.setImageResource(R.drawable.pirates);
+                }
+                if(mItem.getMovieImage() == "hobbit")
+                {
+                    thisMovieImageView.setImageResource(R.drawable.hobbit);
+                }
+                if(mItem.getMovieImage() == "strange")
+                {
+                    thisMovieImageView.setImageResource(R.drawable.strange);
+                }
 
-                
+
 
             }
 
