@@ -1,5 +1,6 @@
 package com.fall2018.cs315.mymovielist;
 
+import android.support.v7.app.AppCompatActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -39,11 +40,14 @@ public class MovieDetailFragment extends Fragment {
      * fragment (e.g. upon screen orientation changes).
      */
     public MovieDetailFragment() {
+
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
 
         // CS315: DO THIS
         // TODO: BUG FIX - Figure out why the App CRASHES when we rotate this Activity...
@@ -54,6 +58,7 @@ public class MovieDetailFragment extends Fragment {
             // to load content from a content provider.
 
             mItem = DumbMovieContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+
 
             Activity activity = this.getActivity();
             CollapsingToolbarLayout appBarLayout = (CollapsingToolbarLayout) activity.findViewById(R.id.toolbar_layout);

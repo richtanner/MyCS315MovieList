@@ -12,5 +12,24 @@
         android:layout_height="match_parent"
         android:id="@+id/webView1"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp" />
+        tools:layout_editor_absoluteY="8dp" >
+
+    </WebView>
+
+    <TextView
+        android:id="@+id/loading"
+        android:layout_width="230dp"
+        android:layout_height="236dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Loading... Please, press the back button if page doesn't load or if you've closed the page."
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
