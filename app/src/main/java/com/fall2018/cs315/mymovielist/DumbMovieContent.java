@@ -60,6 +60,10 @@ public class DumbMovieContent {
      */
     public List<MovieModel> createMovieMagic () {
 
+        //empty array
+        ITEM_MAP.clear();
+        MOVIES.clear();
+
         // make those movie objects
         MovieModel up = new MovieModel(upTitle, upDescription, upYear, upImage, upWeblink);
         MovieModel incredibles = new MovieModel(incrediblesTitle, incrediblesDescription, incrediblesYear, incrediblesImage, incrediblesWeblink);
