@@ -96,7 +96,7 @@ public class MovieDetailFragment extends Fragment {
 
                     //TODO: hint - you need to establish a new intent and launch a new Activity
 
-                    
+
 
 //                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                            .setAction("Action", null).show();
