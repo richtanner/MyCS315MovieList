@@ -86,6 +86,8 @@ public class MovieDetailFragment extends Fragment {
 
                     Intent intent = new Intent(getActivity(), MovieWebpage.class);
                     intent.putExtra(MovieWebpage.WEB_URL, mItem.getMovieWeblink());
+
+                    startActivity(intent);
                 }
             });
         }
