@@ -24,6 +24,7 @@
         <activity
             android:name=".MovieDetailActivity"
             android:label="@string/title_movie_detail"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:parentActivityName=".MovieListActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
