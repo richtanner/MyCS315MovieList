@@ -75,16 +75,18 @@ public class MovieListActivity extends AppCompatActivity {
             holder.mIdView.setText(mValues.get(position).getMovieTitle());
             holder.mContentView.setText(mValues.get(position).getMovieYear());
 
-            holder.mView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Context context = v.getContext();
-                    Intent intent = new Intent(context, MovieDetailActivity.class);
-                    intent.putExtra(MovieDetailFragment.ARG_ITEM_ID, holder.mItem.getMovieTitle());
+            if (holder.mView != null) {
+                holder.mView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Context context = v.getContext();
+                        Intent intent = new Intent(context, MovieDetailActivity.class);
+                        intent.putExtra(MovieDetailFragment.ARG_ITEM_ID, holder.mItem.getMovieTitle());
 
-                    context.startActivity(intent);
-                }
-            });
+                        context.startActivity(intent);
+                    }
+                });
+            }
         }
 
         @Override

@@ -89,18 +89,20 @@ public class MovieDetailFragment extends Fragment {
             }
 
             FloatingActionButton fab = (FloatingActionButton) activity.findViewById(R.id.fab);
-            fab.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
+            if (fab != null) {
+                fab.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
 
-                    // CS315: DO THIS
-                    // TODO: launch the webpage with the URL we gots back from the model... also lose the snackbar stuff
-                    // TODO: hint - you need to establish a new intent and launch a new Activity
+                        // CS315: DO THIS
+                        // TODO: launch the webpage with the URL we gots back from the model... also lose the snackbar stuff
+                        // TODO: hint - you need to establish a new intent and launch a new Activity
 
-                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-                }
-            });
+                        Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+                    }
+                });
+            }
         }
     }
 
