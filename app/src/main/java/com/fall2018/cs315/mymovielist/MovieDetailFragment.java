@@ -62,6 +62,30 @@ public class MovieDetailFragment extends Fragment {
                 // CS315: DO THIS
                 // TODO: Set the image based upon the string we got stashed in getMovieImage()
 
+                if (mItem.getMovieImage() == "star_wars_v")
+                {
+                    thisMovieImageView.setImageResource(R.drawable.star_wars_v);
+                }
+                else if (mItem.getMovieImage() == "star_wars_vi")
+                {
+                    thisMovieImageView.setImageResource(R.drawable.star_wars_vi);
+                }
+                else if (mItem.getMovieImage() == "star_wars_vii")
+                {
+                    thisMovieImageView.setImageResource(R.drawable.star_wars_vii);
+                }
+                else if (mItem.getMovieImage() == "star_wars_rogue_one")
+                {
+                    thisMovieImageView.setImageResource(R.drawable.star_wars_rogue_one);
+                }
+                else if (mItem.getMovieImage() == "star_wars_viii")
+                {
+                    thisMovieImageView.setImageResource(R.drawable.star_wars_viii);
+                }
+                else
+                {
+                    System.out.println("ERROR: COULD NOT FIND IMAGE FOR MOVIE");
+                }
             }
 
             FloatingActionButton fab = (FloatingActionButton) activity.findViewById(R.id.fab);
