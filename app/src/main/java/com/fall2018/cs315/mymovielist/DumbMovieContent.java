@@ -25,35 +25,35 @@ public class DumbMovieContent {
     // CS315: DO THIS
     // TODO: Create five NEW movie objects here. Complete with images and URLs. DELETE the two existing movies, they are only here as an example
 
-    private static final String movie0Title = "Star Wars: Episode V The Empire Strikes Back";
+    private static final String movie0Title = "Star Wars: Episode V";
     private static final String movie0Description = "It's a Star Wars movie made before Disney took over in the 21st century. It is sci-fi in case you didn't know and if you haven' heard of Star Wars then....have you been living under a rock?";
     private static final String movie0Year = "1980";
-    private static final String movie0Image = "star_wars_strikes_back";
+    private static final String movie0Image = "star_wars_v";
     private static final String movie0WebLink = "https://www.starwars.com/films/star-wars-episode-v-the-empire-strikes-back";
 
-    private static final String movie1Title = "Generic Rom Com";
-    private static final String movie1Description = "Naturally, focuses on 2 people who really shouldn’t be together. It somehow becomes mutually advantageous for them to be together, or perhaps, they are interested in each other but their romance is based on false pretenses. Because the leads generally have no charisma, they each need a zany best friend who inserts dirty jokes wherever necessary. The two leads will fall in love in an extended music montage set to the music of Sixpence None the Richer. Once they find out about the false pretenses, they will take some time apart but realize how much they care for the other. Then comes “The Chase,” which can either be in an airport (not legal anymore), in traffic or somehow on boats. \n \nYou've seen this before, but not with these two actors!";
-    private static final String movie1Year = "2015";
-    private static final String movie1Image = "genericromcom";
-    private static final String movie1WebLink = "http://showtimeshowdown.com/5-cliche-formulas-of-movie-genres/";
+    private static final String movie1Title = "Star Wars: Episode VI";
+    private static final String movie1Description = "It's another Star Wars movie made before Disney took over in the 21st century. It is sci-fi in case you didn't know and if you haven' heard of Star Wars then....have you been living under a rock?";
+    private static final String movie1Year = "1983";
+    private static final String movie1Image = "star_wars_vi";
+    private static final String movie1WebLink = "https://www.starwars.com/films/star-wars-episode-vi-return-of-the-jedi/";
 
-    /*private static final String movie2Title = "Star Wars ":
-    private static final String movie2Description = "";
-    private static final String movie2Year = "";
-    private static final String movie2Image = "";
-    private static final String movie2WebLink = "";
+    private static final String movie2Title = "Star Wars: Episode VII";
+    private static final String movie2Description = "This Star Wars release was the first under Disney and thus there was a lot of controversy over it. It's an alright movie, but I thought the ending was a bit disappointing, but I do think it helped their number for the next movie that they released.";
+    private static final String movie2Year = "2015";
+    private static final String movie2Image = "star_wars_vii";
+    private static final String movie2WebLink = "https://www.starwars.com/films/star-wars-episode-vii-the-force-awakens";
 
-    private static final String movie3Title = "Rogue One: A Star Wars Story":
-    private static final String movie3Description = "It's a Star Wars movie made by Disney, what else do you want to know? It's a sci-fi movie that is entertaining but certainly not the best out of all the Star Wars movie's.";
+    private static final String movie3Title = "Rogue One: A Star Wars Story";
+    private static final String movie3Description = "A Star Wars movie that doesn't have \"Episode __\" in the title...innovation! This movie isn't sci-fi despite what you may think. I lied, it is sci-fi and if you thought different then, sorry.";
     private static final String movie3Year = "2016";
-    private static final String movie3Image = "starWarsRogueOne";
+    private static final String movie3Image = "star_wars_rogue_one";
     private static final String movie3WebLink = "https://www.starwars.com/films/rogue-one";
 
-    private static final String movie4Title = "":
-    private static final String movie4Description = "";
-    private static final String movie4Year = "";
-    private static final String movie4Image = "";
-    private static final String movie4WebLink = "";*/
+    private static final String movie4Title = "Star Wars: Epsiode VIII";
+    private static final String movie4Description = "The latest and more recent Star Wars movie that has \"Episode __\" in the title. It's the newest, which makes it the best, right? We'll just go along with that logic and not question it. Oh, it's also sci-fi just like all the others.";
+    private static final String movie4Year = "2017";
+    private static final String movie4Image = "star_wars_viii";
+    private static final String movie4WebLink = "https://www.starwars.com/films/star-wars-episode-viii-the-last-jedi";
 
     /**
      * Create and return an array of Movie items.  Duh!
