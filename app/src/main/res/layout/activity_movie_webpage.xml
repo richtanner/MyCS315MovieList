@@ -6,6 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView android:id="@+id/imageLoading1"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:visibility="visible"
+        android:src="@drawable/splash"
+        />
+
     <WebView
         android:id="@+id/webView"
         android:layout_width="368dp"
