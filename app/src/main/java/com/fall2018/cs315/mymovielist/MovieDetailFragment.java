@@ -61,6 +61,17 @@ public class MovieDetailFragment extends Fragment {
 
                 // CS315: DO THIS
                 // TODO: Set the image based upon the string we got stashed in getMovieImage()
+                if(mItem.getMovieImage() =="Frodo")
+                  thisMovieImageView.setImageResource(R.drawable.Frodo);
+                else if (mItem.getMovieImage() =="Legolas")
+                  thisMovieImageView.setImageResource(R.drawable.Legolas);
+                else if (mItem.getMovieImage() == "Gandalf")
+                  thisMovieImageView.setImageResource(R.drawable.Gandalf);
+                else if (mItem.getMovieImage() == "McQueen")
+                 thisMovieImageView.setImageResource(R.drawable.McQueen);
+                 else
+                  thisMovieImageView.setImageResource(R.drawable.Mator);
+
 
             }
 
@@ -72,9 +83,10 @@ public class MovieDetailFragment extends Fragment {
                     // CS315: DO THIS
                     // TODO: launch the webpage with the URL we gots back from the model... also lose the snackbar stuff
                     // TODO: hint - you need to establish a new intent and launch a new Activity
+                    Uri uriUrl = Uri.parse(mItem.getMovieWeblink());
+                    Intent launchBrowser = new intent(Intent.ACTION_VIEW, uriUrl);
+                    startActivity(launchBrowser);
 
-                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
                 }
             });
         }
@@ -93,4 +105,3 @@ public class MovieDetailFragment extends Fragment {
         return rootView;
     }
 }
-
