@@ -1,6 +1,7 @@
 package com.fall2018.cs315.mymovielist;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -82,8 +83,6 @@ public class MovieDetailFragment extends Fragment {
                     thisMovieImageView.setImageResource(R.drawable.strange);
                 }
 
-
-
             }
 
             FloatingActionButton fab = (FloatingActionButton) activity.findViewById(R.id.fab);
@@ -91,15 +90,16 @@ public class MovieDetailFragment extends Fragment {
                 @Override
                 public void onClick(View view) {
 
+
+                    startActivity(new Intent(getContext(),WebActivity.class));
+
+
                     // CS315: DO THIS
                     // TODO: launch the webpage with the URL we gots back from the model... also lose the snackbar stuff
 
                     //TODO: hint - you need to establish a new intent and launch a new Activity
 
 
-
-//                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                            .setAction("Action", null).show();
                 }
             });
         }
