@@ -1,6 +1,8 @@
 package com.fall2018.cs315.mymovielist;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -51,16 +53,26 @@ public class MovieDetailFragment extends Fragment {
 
             mItem = DumbMovieContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
 
+
+
+
+
             Activity activity = this.getActivity();
             CollapsingToolbarLayout appBarLayout = (CollapsingToolbarLayout) activity.findViewById(R.id.toolbar_layout);
             if (appBarLayout != null) {
                 appBarLayout.setTitle(mItem.getMovieTitle());
             }
+
+
+
             ImageView thisMovieImageView = activity.findViewById(R.id.movieImageView);
             if (thisMovieImageView != null) {
 
                 // CS315: DO THIS
                 // TODO: Set the image based upon the string we got stashed in getMovieImage()
+                int image = getResources().getIdentifier("com.fall2018.cs315.mymovielist:drawable/" + mItem.getMovieImage(), null, null);
+                thisMovieImageView.setImageResource(image);
+
 
             }
 
@@ -73,8 +85,26 @@ public class MovieDetailFragment extends Fragment {
                     // TODO: launch the webpage with the URL we gots back from the model... also lose the snackbar stuff
                     // TODO: hint - you need to establish a new intent and launch a new Activity
 
-                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
+                    Intent intent = new Intent(view.getContext(),WebActivity.class);
+                    String site = mItem.getMovieWeblink();
+
+                    intent.putExtra("site",site);
+
+                    startActivity(intent);
+
+
+
+
+//                    holder.mView.setOnClickListener(new View.OnClickListener() {
+//                        @Override
+//                        public void onClick(View v) {
+//                            Context context = v.getContext();
+//                            Intent intent = new Intent(context, MovieDetailActivity.class);
+//                            intent.putExtra(MovieDetailFragment.ARG_ITEM_ID, holder.mItem.getMovieTitle());
+//
+//                            context.startActivity(intent);
+//                        }
+//                    });
                 }
             });
         }

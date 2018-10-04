@@ -25,17 +25,37 @@ public class DumbMovieContent {
     // CS315: DO THIS
     // TODO: Create five NEW movie objects here. Complete with images and URLs. DELETE the two existing movies, they are only here as an example
 
-    private static final String movie1Title = "Generic Rom Com";
-    private static final String movie1Description = "Naturally, focuses on 2 people who really shouldn’t be together. It somehow becomes mutually advantageous for them to be together, or perhaps, they are interested in each other but their romance is based on false pretenses. Because the leads generally have no charisma, they each need a zany best friend who inserts dirty jokes wherever necessary. The two leads will fall in love in an extended music montage set to the music of Sixpence None the Richer. Once they find out about the false pretenses, they will take some time apart but realize how much they care for the other. Then comes “The Chase,” which can either be in an airport (not legal anymore), in traffic or somehow on boats. \n \nYou've seen this before, but not with these two actors!";
-    private static final String movie1Year = "2015";
-    private static final String movie1Image = "genericromcom";
-    private static final String movie1Weblink = "http://showtimeshowdown.com/5-cliche-formulas-of-movie-genres/";
+    private static final String movie1Title = "August Rush";
+    private static final String movie1Description = "A drama with fairy tale elements, where an orphaned musical prodigy uses his gift as a clue to finding his birth parents.";
+    private static final String movie1Year = "2007";
+    private static final String movie1Image = "august_rush";
+    private static final String movie1Weblink = "https://www.imdb.com/title/tt0426931/";
 
-    private static final String actionTitle = "Every Action Movie Ever";
-    private static final String actionDescription = "The villain has left the hero for dead, or killed the hero’s brother, sister, parents, wife or family pets. Filled with righteous fury, the hero tools up and embarks on a bloody rampage.  \n \nIf the movie does well, we will do it again in the sequel! \n \nMaybe the villain tries to get revenge on the hero for getting revenge on the villain in this movie...";
-    private static final String actionYear = "2017";
-    private static final String actionImage = "genericaction";
-    private static final String actionWeblink = "http://www.denofgeek.com/us/movies/18824/the-5-most-common-action-movie-plots";
+    private static final String movie2Title = "Cat Ballou";
+    private static final String movie2Description = "A woman seeking revenge for her murdered father hires a famous gunman, but he's very different from what she expects.";
+    private static final String movie2Year = "1965";
+    private static final String movie2Image = "cat_ballou";
+    private static final String movie2WebLink = "https://www.imdb.com/title/tt0059017/?ref_=fn_al_tt_1";
+
+    private static final String movie3Title = "Gravity";
+    private static final String movie3Description = "Dr. Ryan Stone, a brilliant medical engineer on her first Shuttle mission, with veteran astronaut Matt Kowalsky in command of his last flight before retiring. /nBut on a seemingly routine spacewalk, disaster strikes. The Shuttle is destroyed, leaving Stone and Kowalsky completely alone-tethered to nothing but each other and spiraling out into the blackness of space. /nThe deafening silence tells them they have lost any link to Earth and any chance for rescue. As fear turns to panic, every gulp of air eats away at what little oxygen is left. /nBut the only way home may be to go further out into the terrifying expanse of space.";
+    private static final String movie3Year = "2013";
+    private static final String movie3Image = "gravity";
+    private static final String movie3Weblink = "https://www.imdb.com/title/tt1454468/?ref_=nv_sr_2";
+
+    private static final String movie4Title = "Megan Leavey";
+    private static final String movie4Description = "The true story of Marine Corporal Megan Leavey, who forms a powerful bond with an aggressive combat dog, Rex. /nWhile deployed in Iraq, the two complete more than 100 missions and save countless lives, until an IED explosion puts their faithfulness to the test.";
+    private static final String movie4Year = "2017";
+    private static final String movie4Image = "megan_leavey";
+    private static final String movie4Weblink = "https://www.imdb.com/title/tt4899370/?ref_=nv_sr_1";
+
+    private static final String movie5Title = "V for Vendetta";
+    private static final String movie5Description = "In a world in which Great Britain has become a fascist state, a masked vigilante known only as 'V' conducts guerrilla warfare against the oppressive British government. /nWhen 'V' rescues a young woman from the secret police, he finds in her an ally with whom he can continue his fight to free the people of Britain.";
+    private static final String movie5Year = "2006";
+    private static final String movie5Image = "v";
+    private static final String movie5Weblink = "https://www.imdb.com/title/tt0434409/?ref_=nv_sr_1";
+
+
 
     /*comment to make a change*/
 
@@ -46,12 +66,18 @@ public class DumbMovieContent {
     public List<MovieModel> createMovieMagic () {
 
         // make those movie objects
-        MovieModel action = new MovieModel(actionTitle, actionDescription, actionYear, actionImage, actionWeblink);
-        MovieModel romcom = new MovieModel(movie1Title, movie1Description, movie1Year, movie1Image, movie1Weblink);
+        MovieModel movie1 = new MovieModel(movie1Title, movie1Description, movie1Year, movie1Image, movie1Weblink);
+        MovieModel movie2 = new MovieModel(movie2Title, movie2Description, movie2Year, movie2Image, movie2WebLink);
+        MovieModel movie3 = new MovieModel(movie3Title, movie3Description, movie3Year, movie3Image, movie3Weblink);
+        MovieModel movie4 = new MovieModel(movie4Title, movie4Description, movie4Year, movie4Image, movie4Weblink);
+        MovieModel movie5 = new MovieModel(movie5Title, movie5Description, movie5Year, movie5Image, movie5Weblink);
 
         // add EACH movie object to our lists and maps
-        addMovieToList(action);
-        addMovieToList(romcom);
+        addMovieToList(movie1);
+        addMovieToList(movie2);
+        addMovieToList(movie3);
+        addMovieToList(movie4);
+        addMovieToList(movie5);
 
         // no more movies to add?  Okay... return our list
         return MOVIES;
