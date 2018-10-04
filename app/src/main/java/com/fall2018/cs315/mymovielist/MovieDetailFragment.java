@@ -60,7 +60,7 @@ public class MovieDetailFragment extends Fragment {
             }
             ImageView thisMovieImageView = activity.findViewById(R.id.movieImageView);
             if (thisMovieImageView != null) {
-
+                activity.findViewById(R.id)
                 // CS315: DO THIS
                 // TODO: Set the image based upon the string we got stashed in getMovieImage()
                 String movname = mItem.getMovieImage(); // get name of current movie
@@ -92,11 +92,11 @@ public class MovieDetailFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(android.R.layout.movie_detail, container, false);
+        View rootView = inflater.inflate(R.layout.movie_detail, container, false);
 
         // Show the Movie Description as text in a TextView.
         if (mItem != null) {
-            ((TextView) rootView.findViewById(android.R.id.movie_detail)).setText(mItem.getMovieDescription());
+            ((TextView) rootView.findViewById(R.id.movie_detail)).setText(mItem.getMovieDescription());
 
         }
 
