@@ -63,10 +63,18 @@ public class DumbMovieContent {
         // make those movie objects
         MovieModel romcom0 = new MovieModel(movie0Title, movie0Description, movie0Year, movie0Image, movie0WebLink);
         MovieModel romcom1 = new MovieModel(movie1Title, movie1Description, movie1Year, movie1Image, movie1WebLink);
+        MovieModel romcom2 = new MovieModel(movie2Title, movie2Description, movie2Year, movie2Image, movie2WebLink);
+        MovieModel romcom3 = new MovieModel(movie3Title, movie3Description, movie3Year, movie3Image, movie3WebLink);
+        MovieModel romcom4 = new MovieModel(movie4Title, movie4Description, movie4Year, movie4Image, movie4WebLink);
 
         // add EACH movie object to our lists and maps
-        addMovieToList(romcom0);
-        addMovieToList(romcom1);
+        if (MOVIES.size() != 5) {
+            addMovieToList(romcom0);
+            addMovieToList(romcom1);
+            addMovieToList(romcom2);
+            addMovieToList(romcom3);
+            addMovieToList(romcom4);
+        }
 
         // no more movies to add?  Okay... return our list
         return MOVIES;
