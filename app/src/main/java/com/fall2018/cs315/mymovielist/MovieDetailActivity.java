@@ -2,10 +2,11 @@ package com.fall2018.cs315.mymovielist;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 
 /**
  * An activity representing a single Movie detail screen. This
@@ -14,6 +15,7 @@ import android.view.MenuItem;
  * in a {@link MovieListActivity}.
  */
 public class MovieDetailActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,5 +69,10 @@ public class MovieDetailActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+        public void loadWebPage(View v){
+
+        Intent intent = new Intent(this, WebActivity.class);
+        startActivity(intent);
+        }
 }
 
