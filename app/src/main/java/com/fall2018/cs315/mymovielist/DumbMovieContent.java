@@ -37,7 +37,7 @@ public class DumbMovieContent {
     private static final String movie2Image = "poster2.jpg";
     private static final String movie2Weblink = "https://www.imdb.com/title/tt0071853/";
 
-    private static final String movie3Title = "Hot Fuzz";
+    private static final String movie3Title = "Hot Fuzz";  // best movie ever
     private static final String movie3Description = "From the director of Shawn of the Dead comes the second Cornetto movie in the trilogy: Hot Fuzz. A cop who takes everything seriously must be reassigned to a village where almost nothing happens, except for the occasional underage drinker, runaway swan, and shadowy killer. So should you see this movie? 'Yarp'";
     private static final String movie3Year = "2007";
     private static final String movie3Image = "poster3.jpg";
