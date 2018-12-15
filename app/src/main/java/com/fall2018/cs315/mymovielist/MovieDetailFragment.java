@@ -63,15 +63,15 @@ public class MovieDetailFragment extends Fragment {
                 // CS315: DO THIS
                 // TODO: Set the image based upon the string we got stashed in getMovieImage()
 
-                if(mItem.getMovieImage() == "poster1.jpg")
+                if(mItem.getMovieImage() == "avengers.jpg")
                     thisMovieImageView.setImageResource(R.drawable.avengers);
-                else if (mItem.getMovieImage() == "poster2.jpg")
+                else if (mItem.getMovieImage() == "shaun.jpg")
                     thisMovieImageView.setImageResource(R.drawable.shaun);
-                else if (mItem.getMovieImage() == "poster3.jpg")
+                else if (mItem.getMovieImage() == "spiderman.jpg")
                     thisMovieImageView.setImageResource(R.drawable.spiderman);
-                else if (mItem.getMovieImage() == "poster4.jpg")
+                else if (mItem.getMovieImage() == "starshiptroopers.jpg")
                     thisMovieImageView.setImageResource(R.drawable.starshiptroopers);
-                else if (mItem.getMovieImage() == "poster5.jpg")
+                else if (mItem.getMovieImage() == "avatar.jpg")
                     thisMovieImageView.setImageResource(R.drawable.avatar);
 
             }
