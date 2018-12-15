@@ -1,6 +1,7 @@
 package com.fall2018.cs315.mymovielist;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -62,6 +63,17 @@ public class MovieDetailFragment extends Fragment {
                 // CS315: DO THIS
                 // TODO: Set the image based upon the string we got stashed in getMovieImage()
 
+                if(mItem.getMovieImage() == "poster1.jpg")
+                    thisMovieImageView.setImageResource(R.drawable.avengers);
+                else if (mItem.getMovieImage() == "poster2.jpg")
+                    thisMovieImageView.setImageResource(R.drawable.shaun);
+                else if (mItem.getMovieImage() == "poster3.jpg")
+                    thisMovieImageView.setImageResource(R.drawable.spiderman);
+                else if (mItem.getMovieImage() == "poster4.jpg")
+                    thisMovieImageView.setImageResource(R.drawable.starshiptroopers);
+                else if (mItem.getMovieImage() == "poster5.jpg")
+                    thisMovieImageView.setImageResource(R.drawable.avatar);
+
             }
 
             FloatingActionButton fab = (FloatingActionButton) activity.findViewById(R.id.fab);
@@ -69,6 +81,9 @@ public class MovieDetailFragment extends Fragment {
                 @Override
                 public void onClick(View view) {
 
+                    Intent intent = new Intent(getContext(), WebActivity.class);
+                    intent.putExtra("MOVIEURL", mItem.getMovieWeblink());
+                    startActivity(intent);
                     // CS315: DO THIS
                     // TODO: launch the webpage with the URL we gots back from the model... also lose the snackbar stuff
                     // TODO: hint - you need to establish a new intent and launch a new Activity

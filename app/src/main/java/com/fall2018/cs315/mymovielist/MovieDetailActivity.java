@@ -6,6 +6,7 @@ import android.support.v7.widget.Toolbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.ActionBar;
 import android.view.MenuItem;
+import android.view.View;
 
 /**
  * An activity representing a single Movie detail screen. This
@@ -65,6 +66,11 @@ public class MovieDetailActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+    public void loadWebPage(View v){
+
+        Intent intent = new Intent(this, WebActivity.class);
+        startActivity(intent);
     }
 
 }
